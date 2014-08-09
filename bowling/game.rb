@@ -10,6 +10,14 @@ module Bowling
     def strike
       @score = 10
     end
+
+    def spare number_pins
+      @score = number_pins
+    end
+
+    def roll number_pins
+      @score += number_pins
+    end
   end
 
 end
