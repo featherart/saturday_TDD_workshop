@@ -27,13 +27,20 @@ module Bowling
 
     it "when a strike is bowled, the total score is 10 +
         the total of the next two roll to that frame" do
-       
+
       game.strike
 
       game.roll(7)
       game.roll(5)
 
       expect(game.score).to eq(22)
+    end
+
+    it "return 10 + number of pins knocked down in next roll for a spare" do
+      game.spare
+      game.roll(2)
+
+      expect(game.score).to eq(12)
     end
   end
 end
