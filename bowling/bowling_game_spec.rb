@@ -2,9 +2,7 @@ require_relative 'bowling_game'
 
 describe BowlingGame do
 
-  before do
-    @game = BowlingGame.new
-  end
+  let(:game) { BowlingGame.new }
 
   it 'scores all gutters with 0' do
 
